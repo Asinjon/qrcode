@@ -17,15 +17,15 @@ Route::get('/', function () {
     $products = [
         [
             "id" => 1,
-            "name" => "Product 1"
+            "code" => "4445645656"
         ],
         [
             "id" => 2,
-            "name" => "Product 2"
+            "code" => "4445645666"
         ],
         [
             "id" => 3,
-            "name" => "Product 3"
+            "code" => "4445645676"
         ],
     ];
     return view("welcome", compact("products"));

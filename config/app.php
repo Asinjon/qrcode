@@ -160,6 +160,7 @@ return [
          * Package Service Providers...
          */
         \SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+        \Milon\Barcode\BarcodeServiceProvider::class,
 
         /*
          * Application Service Providers...

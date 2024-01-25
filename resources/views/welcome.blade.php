@@ -27,7 +27,10 @@
                 @foreach($products as $product)
                     <tr style="border: 1px solid black;">
                         <td style="border: 1px solid black;">{{$product["id"]}}</td>
-                        <td style="margin-bottom: 10px;border: 1px solid black;">{{\SimpleSoftwareIO\QrCode\Facades\QrCode::size(50)->generate($product["name"])}}</td>
+                        <td style="margin-bottom: 10px;border: 1px solid black;">
+                            <img src="data:image/png;base64,{{\Milon\Barcode\Facades\DNS1DFacade::getBarcodePNG('4', 'C39+')}}" alt="barcode"   />
+{{--                            {{ \Milon\Barcode\Facades\DNS1DFacade::getBarcodeHTML($product["code"], "PHARMA2T") }}--}}
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
